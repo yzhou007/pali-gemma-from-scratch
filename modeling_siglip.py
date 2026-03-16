@@ -129,7 +129,7 @@ class SiglipMLP(nn.Module):
         hidden_states = self.fc2(hidden_states)
         return hidden_states
 
-class SignlipEncoderLayer(nn.Module):
+class SiglipEncoderLayer(nn.Module):
     def __init__(self, config: SiglipVisionConfig):
         super().__init__()
 
@@ -194,7 +194,7 @@ class SiglipVisionModel(nn.Module):
         super().__init__()
 
         self.config = config
-        self.vision_model = SignlipVisionTransformer(config)
+        self.vision_model = SiglipVisionTransformer(config)
 
     def forward(self, pixel_values) -> Tuple:
         # (batch, channels, height, width) -> (batch, num_patches, embed_dim)
