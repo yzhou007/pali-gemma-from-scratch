@@ -23,6 +23,7 @@ class SiglipVisionConfig:
         self.hidden_size = hidden_size
         self.intermediate_size = intermediate_size
         self.num_hidden_layer = num_hidden_layer
+        self.num_attention_heads = num_attention_heads
         self.num_channels = num_channels
         self.patch_size = patch_size
         self.image_size = image_size
